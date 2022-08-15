@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.Common\\Udemy.AdvertisementApp.Common.csproj": {}
+  },
+  "projects": {
+    "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.Common\\Udemy.AdvertisementApp.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.Common\\Udemy.AdvertisementApp.Common.csproj",
+        "projectName": "Udemy.AdvertisementApp.Common",
+        "projectPath": "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.Common\\Udemy.AdvertisementApp.Common.csproj",
+        "packagesPath": "C:\\Users\\Emre Arslan\\.nuget\\packages\\",
+        "outputPath": "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emre Arslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.108\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
