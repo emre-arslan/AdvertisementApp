@@ -10,6 +10,7 @@ using Udemy.AdvertisementApp.Business.ValidationRules;
 using Udemy.AdvertisementApp.DataAccess.Contexts;
 using Udemy.AdvertisementApp.DataAccess.UnitOfWork;
 using Udemy.AdvertisementApp.Dtos;
+using Udemy.AdvertisementApp.Dtos.GenderDtos;
 
 namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
 {
@@ -27,6 +28,7 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
                 opt.AddProfile(new ProvidedServiceProfile());
                 opt.AddProfile(new AdvertisementProfile());
                 opt.AddProfile(new AppUserProfile());
+                opt.AddProfile(new GenderProfile());
                 //opt.AddProfile();
             });
 
@@ -43,6 +45,11 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
 
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();
             services.AddTransient<IValidator<AppUserCreateDto>, AppUserCreateDtoValidator>();
+
+            services.AddTransient<IValidator<GenderCreateDto>, GenderCreateDtoValidator>();
+            services.AddTransient<IValidator<GenderUpdateDto>, GenderUpdateDtoValidator>();
+
+
 
             services.AddScoped<IProvidedServiceService, ProvidedServiceService>();
             services.AddScoped<IAdvertisementService, AdvertisementService>();
