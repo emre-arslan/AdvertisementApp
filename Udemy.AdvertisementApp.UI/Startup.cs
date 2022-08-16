@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft;
+using Udemy.AdvertisementApp.UI.Models;
+using Udemy.AdvertisementApp.UI.ValidationRules;
 
 namespace Udemy.AdvertisementApp.UI
 {
@@ -27,6 +30,7 @@ namespace Udemy.AdvertisementApp.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDependencies(Configuration);
+            services.AddTransient<IValidator<UserCreateModel>, UserCreateModelValidator>();
             services.AddControllersWithViews();
         }
 

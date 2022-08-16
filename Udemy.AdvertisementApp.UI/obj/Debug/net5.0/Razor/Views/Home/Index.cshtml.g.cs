@@ -19,8 +19,15 @@ using Udemy.AdvertisementApp.Dtos;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\Views\_ViewImports.cshtml"
+using Udemy.AdvertisementApp.UI.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94dd183acd8668a4e556acf3dd05e57be7ef34d0", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7b413a15485b2f7a1148f280c1d7ef9bdab98617", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9e97ccb424cd00fca532e9277ba5cc0eaa21a30b", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<ProvidedServiceListDto>>
     {
         #pragma warning disable 1998

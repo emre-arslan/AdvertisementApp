@@ -10,7 +10,6 @@ using Udemy.AdvertisementApp.Business.ValidationRules;
 using Udemy.AdvertisementApp.DataAccess.Contexts;
 using Udemy.AdvertisementApp.DataAccess.UnitOfWork;
 using Udemy.AdvertisementApp.Dtos;
-using Udemy.AdvertisementApp.Dtos.GenderDtos;
 
 namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
 {
@@ -54,6 +53,7 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
             services.AddScoped<IProvidedServiceService, ProvidedServiceService>();
             services.AddScoped<IAdvertisementService, AdvertisementService>();
             services.AddScoped<IAppUserService, AppUserService>();
+            services.AddScoped<IGenderService, GenderService>();
 
         }
     }

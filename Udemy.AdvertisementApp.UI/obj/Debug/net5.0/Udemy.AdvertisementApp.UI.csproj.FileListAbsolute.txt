@@ -161,3 +161,4 @@ D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Udemy.AdvertisementApp.UI.pdb
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Udemy.AdvertisementApp.UI.genruntimeconfig.cache
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Razor\Views\Home\HumanResource.cshtml.g.cs
+D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
