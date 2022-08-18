@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MjtUA9toT+Wvijy1U2CleQMk9lk8D2TYBD+Q5C0y+1JkPx1/FZU1gsAxjZrauXCamumYwmisXFZ8pmZ0VtBbKg==",
+  "dgSpecHash": "bWukA/eMM5OnE7sR0bQO8N7cQAr2EH+rnJlfOAvPtLb9cZsoBhhmMClwi8+TdBrdT0HE1ub6Viu85q53HAl8Lw==",
   "success": true,
   "projectFilePath": "D:\\NEA\\D248.Udemy.AdvertisementApp\\Udemy.AdvertisementApp\\Udemy.AdvertisementApp.UI\\Udemy.AdvertisementApp.UI.csproj",
   "expectedPackageFiles": [
@@ -102,8 +102,7 @@
     "C:\\Users\\Emre Arslan\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Emre Arslan\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Emre Arslan\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Emre Arslan\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Emre Arslan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "C:\\Users\\Emre Arslan\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

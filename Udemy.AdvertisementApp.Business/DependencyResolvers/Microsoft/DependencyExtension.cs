@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 using Udemy.AdvertisementApp.Business.Interfaces;
 using Udemy.AdvertisementApp.Business.Mappings.AutoMapper;
 using Udemy.AdvertisementApp.Business.Services;
@@ -22,17 +23,7 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
                 opt.UseSqlServer(configuration.GetConnectionString("Local"));
             });
 
-            var mapperConfiguration = new MapperConfiguration(opt =>
-            {
-                opt.AddProfile(new ProvidedServiceProfile());
-                opt.AddProfile(new AdvertisementProfile());
-                opt.AddProfile(new AppUserProfile());
-                opt.AddProfile(new GenderProfile());
-                //opt.AddProfile();
-            });
 
-            var mapper = mapperConfiguration.CreateMapper();
-            services.AddSingleton(mapper);
 
             services.AddScoped<IUow, Uow>();
 
@@ -56,5 +47,7 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
             services.AddScoped<IGenderService, GenderService>();
 
         }
+
+       
     }
 }

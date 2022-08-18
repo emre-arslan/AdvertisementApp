@@ -22,7 +22,6 @@ D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.runtimeconfig.json
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.runtimeconfig.dev.json
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.dll
-D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\ref\Udemy.AdvertisementApp.DataAccess.dll
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.pdb
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.Common.dll
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\bin\Debug\net5.0\Udemy.AdvertisementApp.Entities.dll
@@ -38,3 +37,4 @@ D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\obj\Debug\net5.0\ref\Udemy.AdvertisementApp.DataAccess.dll
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\obj\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.pdb
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\obj\Debug\net5.0\Udemy.AdvertisementApp.DataAccess.genruntimeconfig.cache
+D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.DataAccess\obj\Debug\net5.0\refint\Udemy.AdvertisementApp.DataAccess.dll
