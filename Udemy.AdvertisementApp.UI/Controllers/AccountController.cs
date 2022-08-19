@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -21,13 +22,13 @@ namespace Udemy.AdvertisementApp.UI.Controllers
         private readonly IAppUserService _appUserService;
         private readonly IMapper _mapper;
 
+
         public AccountController(IGenderService genderService, IValidator<UserCreateModel> userCreateValidator, IAppUserService appUserService, IMapper mapper, IValidator<AppUserLoginDto> userLoginValidator)
         {
             _genderService = genderService;
             _userCreateValidator = userCreateValidator;
             _appUserService = appUserService;
             _mapper = mapper;
-            _userLoginValidator = userLoginValidator;
         }
 
         public async Task<IActionResult> SignUp()
@@ -74,15 +75,34 @@ namespace Udemy.AdvertisementApp.UI.Controllers
                 var user = await _appUserService.CheckUserAsync(model);
                 if (user.ResponseType == Common.ResponseType.Success)
                 {
+                    var _roles = await _appUserService.GetRolesByUserId(user.Data.Id);
                     //ilgili kullanıcının rollerini çekicem.
-                    var claims = new List<Claim> { };
+                    var claims = new List<Claim>();
+
+                    if (_roles.ResponseType == Common.ResponseType.Success)
+                    {
+                        foreach (var item in _roles.Data)
+                        {
+                            claims.Add(new Claim(ClaimTypes.Role, item.Definition));
+                        }
+                    }
+                    claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Data.Id.ToString()));
+                    claims.Add(new Claim(ClaimTypes.Name, user.Data.Firstname));
+                    claims.Add(new Claim(ClaimTypes.Surname, user.Data.Surname));
+
+
 
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
                     var authProperties = new AuthenticationProperties
                     {
                         IsPersistent = model.RememberMe,
+                        ExpiresUtc = DateTime.UtcNow.AddDays(2)
                     };
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                    return RedirectToAction("Index", "Home");
                 }
 
                 ModelState.AddModelError("", user.Message);

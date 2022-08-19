@@ -65,5 +65,16 @@ namespace Udemy.AdvertisementApp.Business.Services
             }
             return new Response<AppUserListDto>(ResponseType.ValidationError, validateResponse.ConvertToCustomValidationError().Select(s => s.ErrorMessage).ToString());
         }
+
+        public async Task<IResponse<List<AppRoleListDto>>> GetRolesByUserId(int userId)
+        {
+            var roles = await _uow.GetRepository<AppRole>().GetAllAsync(w => w.AppUserRoles.Any(a => a.AppUserId == userId));
+            if (roles == null)
+                return new Response<List<AppRoleListDto>>(ResponseType.NotFound, "asdas");
+
+            var dto = _mapper.Map<List<AppRoleListDto>>(roles);
+            return new Response<List<AppRoleListDto>>(ResponseType.Success, dto);
+
+        }
     }
 }

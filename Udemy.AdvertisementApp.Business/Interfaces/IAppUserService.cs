@@ -13,5 +13,6 @@ namespace Udemy.AdvertisementApp.Business.Interfaces
     {
         Task<IResponse<AppUserCreateDto>> CreateWithRoleAsync(AppUserCreateDto dto, int roleId);
         Task<IResponse<AppUserListDto>> CheckUserAsync(AppUserLoginDto loginDto);
+        Task<IResponse<List<AppRoleListDto>>> GetRolesByUserId(int userId);
     }
 }

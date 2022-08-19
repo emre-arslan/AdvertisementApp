@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,13 +50,14 @@ namespace Udemy.AdvertisementApp.UI
 
             services.AddTransient<IValidator<UserCreateModel>, UserCreateModelValidator>();
 
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
+            services.AddAuthentication(opt => opt.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
             {
                 opt.Cookie.Name = "AdvertisementApp";
                 opt.Cookie.HttpOnly = true; //client-side scriptlerden korur
                 opt.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict; // cookieyi paylaşıma kapatmış oluyoruz.
                 opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest; // httpden gelirse http , https gelirse https çalışsın
-                opt.Cookie.Expiration = TimeSpan.FromDays(20);
+                //opt.Cookie.Expiration = TimeSpan.FromMinutes(120);
+                //opt.ExpireTimeSpan = TimeSpan.FromMinutes(120);
                 opt.LoginPath = new PathString("/Account/SignIn");
                 opt.LoginPath = new PathString("/Account/LogOut");
                 opt.AccessDeniedPath = new PathString("/Account/AccessDenied");
