@@ -162,3 +162,4 @@ D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Razor\Views\Home\HumanResource.cshtml.g.cs
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
 D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\refint\Udemy.AdvertisementApp.UI.dll
+D:\NEA\D248.Udemy.AdvertisementApp\Udemy.AdvertisementApp\Udemy.AdvertisementApp.UI\obj\Debug\net5.0\Razor\Views\Account\SignIn.cshtml.g.cs

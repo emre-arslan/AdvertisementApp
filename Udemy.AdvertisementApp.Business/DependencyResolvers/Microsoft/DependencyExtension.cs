@@ -35,9 +35,12 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
 
             services.AddTransient<IValidator<AppUserUpdateDto>, AppUserUpdateDtoValidator>();
             services.AddTransient<IValidator<AppUserCreateDto>, AppUserCreateDtoValidator>();
+            services.AddTransient<IValidator<AppUserLoginDto>, AppUserLoginDtoValidator>();
 
             services.AddTransient<IValidator<GenderCreateDto>, GenderCreateDtoValidator>();
             services.AddTransient<IValidator<GenderUpdateDto>, GenderUpdateDtoValidator>();
+
+
 
 
 
@@ -48,6 +51,6 @@ namespace Udemy.AdvertisementApp.Business.DependencyResolvers.Microsoft
 
         }
 
-       
+
     }
 }

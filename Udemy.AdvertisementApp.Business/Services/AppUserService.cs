@@ -19,11 +19,14 @@ namespace Udemy.AdvertisementApp.Business.Services
         private readonly IUow _uow;
         private readonly IMapper _mapper;
         private readonly IValidator<AppUserCreateDto> _createDtoValidator;
-        public AppUserService(IMapper mapper, IValidator<AppUserCreateDto> createDtoValidator, IValidator<AppUserUpdateDto> updateDtoValidator, IUow uow) : base(mapper, createDtoValidator, updateDtoValidator, uow)
+        private readonly IValidator<AppUserLoginDto> _userLoginValidator;
+
+        public AppUserService(IMapper mapper, IValidator<AppUserCreateDto> createDtoValidator, IValidator<AppUserUpdateDto> updateDtoValidator, IUow uow, IValidator<AppUserLoginDto> userLoginValidator) : base(mapper, createDtoValidator, updateDtoValidator, uow)
         {
             _uow = uow;
             _mapper = mapper;
             _createDtoValidator = createDtoValidator;
+            _userLoginValidator = userLoginValidator;
         }
 
 
@@ -45,6 +48,22 @@ namespace Udemy.AdvertisementApp.Business.Services
 
             return new Response<AppUserCreateDto>(dto, _validateResponse.ConvertToCustomValidationError());
 
+        }
+
+        public async Task<IResponse<AppUserListDto>> CheckUserAsync(AppUserLoginDto loginDto)
+        {
+            var validateResponse = _userLoginValidator.Validate(loginDto);
+            if (validateResponse.IsValid)
+            {
+                var _user = await _uow.GetRepository<AppUser>().GetByFilterAsync(f => f.Username.Equals(loginDto.Username) && f.Password.Equals(loginDto.Password));
+                if (_user != null)
+                {
+                    var appUserDto = _mapper.Map<AppUserListDto>(_user);
+                    return new Response<AppUserListDto>(ResponseType.Success, appUserDto);
+                }
+                return new Response<AppUserListDto>(ResponseType.NotFound, "Not found user");
+            }
+            return new Response<AppUserListDto>(ResponseType.ValidationError, validateResponse.ConvertToCustomValidationError().Select(s => s.ErrorMessage).ToString());
         }
     }
 }
