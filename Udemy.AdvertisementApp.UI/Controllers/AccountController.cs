@@ -101,7 +101,7 @@ namespace Udemy.AdvertisementApp.UI.Controllers
                     };
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
+                    
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -109,6 +109,12 @@ namespace Udemy.AdvertisementApp.UI.Controllers
             }
 
             return View(model);
+        }
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
